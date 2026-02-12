@@ -21,27 +21,34 @@ NEW CUSTOM SONG ORDER
 
 OCCASION: ${formData.occasion}
 RECIPIENT: ${formData.recipientName}
+RELATIONSHIP: ${formData.relationship}
 DATE NEEDED: ${formData.dateNeeded}
 
-STORY:
-${formData.story}
-
 MEMORIES:
-${formData.keyMemories || 'Not provided'}
+${formData.memories}
+
+INSIDE JOKES:
+${formData.insideJokes || 'Not provided'}
+
+PERSONALITY:
+${formData.personality || 'Not provided'}
+
+SPECIFIC DETAILS:
+${formData.specificDetails || 'Not provided'}
 
 TONE: ${formData.tone}
 GENRES: ${formData.genres?.join(', ') || 'Not specified'}
-
-REFERENCE SONGS:
-${formData.referenceSongs || 'Not provided'}
+REFERENCE ARTISTS: ${formData.referenceArtists || 'Not provided'}
+TEMPO: ${formData.tempo || 'Not specified'}
 
 SPECIAL REQUESTS:
 ${formData.specialRequests || 'None'}
 
 CONTACT INFO:
-Name: ${formData.name}
+Name: ${formData.customerName}
 Email: ${formData.email}
 Phone: ${formData.phone || 'Not provided'}
+Best time to contact: ${formData.bestTimeToContact || 'Any time'}
 
 PRICE: $500 ($250 deposit, $250 on delivery)
     `.trim()
@@ -69,7 +76,7 @@ PRICE: $500 ($250 deposit, $250 on delivery)
           <strong>Occasion:</strong> {formData.occasion}
         </div>
         <div style={{marginBottom: '1rem'}}>
-          <strong>For:</strong> {formData.recipientName}
+          <strong>For:</strong> {formData.recipientName} ({formData.relationship})
         </div>
         <div style={{marginBottom: '1rem'}}>
           <strong>Date Needed:</strong> {formData.dateNeeded}
@@ -81,7 +88,7 @@ PRICE: $500 ($250 deposit, $250 on delivery)
           <strong>Genre(s):</strong> {formData.genres?.join(', ') || 'Not specified'}
         </div>
         <div style={{marginBottom: '1rem'}}>
-          <strong>Your Name:</strong> {formData.name}
+          <strong>Your Name:</strong> {formData.customerName}
         </div>
         <div style={{marginBottom: '1rem'}}>
           <strong>Email:</strong> {formData.email}
