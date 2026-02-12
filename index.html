@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourSongHere - Custom AI-Generated Songs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+
+        .nav {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #8B5CF6, #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary {
+            background: #8B5CF6;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: #7C3AED;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #8B5CF6;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            border: 2px solid #8B5CF6;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .btn-secondary:hover {
+            background: #f3f4f6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #faf5ff 0%, #fce7f3 50%, #eff6ff 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #8B5CF6, #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #faf5ff, #fce7f3);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .pricing-card {
+            border-radius: 1rem;
+            padding: 2rem;
+            background: #f9fafb;
+        }
+
+        .pricing-card-popular {
+            background: linear-gradient(135deg, #8B5CF6, #EC4899);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 1rem 0 2rem;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid #d1d5db;
+            font-size: 1rem;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .grid-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">🎵 YourSongHere</div>
+            <button class="btn-primary">Create Song</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>
+            Every Moment Deserves<br>
+            <span class="gradient-text">Its Own Soundtrack</span>
+        </h1>
+        <p>Create professional, personalized songs for weddings, anniversaries, birthdays, and every milestone that matters.</p>
+        <div class="hero-buttons">
+            <button class="btn-primary" style="font-size: 1.125rem; padding: 1rem 2rem;">Start Creating</button>
+            <button class="btn-secondary" style="font-size: 1.125rem; padding: 1rem 2rem;">Listen to Samples</button>
+        </div>
+    </section>
+
+    <!-- Featured Songs -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Songs</h2>
+                <p>Hear the quality and emotion in every note</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Bill & Beverly's 50th Anniversary</h3>
+                    <p>🎁 Golden Anniversary | ❤️ 1970s Folk Rock</p>
+                    <p style="font-style: italic;">"A journey through 50 years of love..."</p>
+                    <button class="btn-primary" style="width: 100%;">▶ Listen Now</button>
+                </div>
+                <div class="card">
+                    <h3>Sarah's Sweet 16</h3>
+                    <p>🎁 Birthday | ❤️ Pop Anthem</p>
+                    <p style="font-style: italic;">"Sixteen candles burning bright..."</p>
+                    <button class="btn-primary" style="width: 100%;">▶ Listen Now</button>
+                </div>
+                <div class="card">
+                    <h3>The Johnson Wedding</h3>
+                    <p>🎁 Wedding | ❤️ Romantic Ballad</p>
+                    <p style="font-style: italic;">"Two hearts becoming one..."</p>
+                    <button class="btn-primary" style="width: 100%;">▶ Listen Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Three simple steps to your perfect song</p>
+            </div>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <h3>✨ 1. Share Your Story</h3>
+                    <p>Tell us about the occasion, the people, and the memories that matter</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎵 2. AI Creates Magic</h3>
+                    <p>Our AI composes a unique, professional-quality song just for you</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎁 3. Share & Celebrate</h3>
+                    <p>Download, share on social media, or surprise someone special</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your needs</p>
+            </div>
+            <div class="grid-3">
+                <div class="pricing-card">
+                    <h3>Single Song</h3>
+                    <p>The Impulse Buy</p>
+                    <div class="pricing-price">$9.99</div>
+                    <ul class="features-list">
+                        <li>✓ 4 AI-generated drafts</li>
+                        <li>✓ Pick your favorite</li>
+                        <li>✓ High-quality MP3 download</li>
+                        <li>✓ Private listening page</li>
+                    </ul>
+                    <button class="btn-primary" style="width: 100%;">Get Started</button>
+                </div>
+                <div class="pricing-card pricing-card-popular">
+                    <p style="text-align: center; margin-bottom: 1rem;">⭐ MOST POPULAR</p>
+                    <h3>Gift Package</h3>
+                    <p>The Full Service</p>
+                    <div class="pricing-price">$29.99</div>
+                    <ul class="features-list">
+                        <li>✓ Unlimited drafts until perfect</li>
+                        <li>✓ High-quality MP3 download</li>
+                        <li>✓ Private listening page</li>
+                        <li>✓ Custom video with photos</li>
+                        <li>✓ Social media ready</li>
+                    </ul>
+                    <button style="width: 100%; padding: 0.75rem; border-radius: 9999px; border: none; cursor: pointer; font-weight: 600; background: white; color: #8B5CF6;">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Unlimited</h3>
+                    <p>The Creator</p>
+                    <div class="pricing-price">$49/mo</div>
+                    <ul class="features-list">
+                        <li>✓ Unlimited songs per month</li>
+                        <li>✓ All premium features</li>
+                        <li>✓ Priority generation</li>
+                        <li>✓ Cancel anytime</li>
+                    </ul>
+                    <button class="btn-primary" style="width: 100%;">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="section" style="background: linear-gradient(135deg, #faf5ff, #fce7f3);">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Create Your Song</h2>
+                <form>
+                    <div class="form-group">
+                        <label>Name(s)</label>
+                        <input type="text" class="form-control" placeholder="Who is this song for?">
+                    </div>
+                    <div class="form-group">
+                        <label>Occasion</label>
+                        <select class="form-control">
+                            <option>Select an occasion</option>
+                            <option>Wedding</option>
+                            <option>Anniversary</option>
+                            <option>Birthday</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Music Style</label>
+                        <select class="form-control">
+                            <option>Select a style</option>
+                            <option>Pop</option>
+                            <option>Rock</option>
+                            <option>Country</option>
+                            <option>Folk</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Share Your Memories</label>
+                        <textarea class="form-control" placeholder="Tell us about the special moments..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem; font-size: 1.125rem;">Create My Song →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="margin-bottom: 2rem;">
+            <div class="logo" style="margin-bottom: 1rem;">🎵 YourSongHere</div>
+            <p style="color: #9ca3af;">Creating personalized songs for life's most meaningful moments.</p>
+        </div>
+        <p style="color: #9ca3af;">&copy; 2024 YourSongHere. All rights reserved.</p>
+    </footer>
+</body>
+</html>
