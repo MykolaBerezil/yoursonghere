@@ -54,7 +54,7 @@ PRICE: $500 ($250 deposit, $250 on delivery)
     `.trim()
 
     // Open email client
-    const mailtoLink = `mailto:northbynome@gmail.com?subject=Custom Song Order - ${formData.recipientName}&body=${encodeURIComponent(emailBody)}`
+    const mailtoLink = `mailto:jinglejeff@gmail.com?subject=Custom Song Order - ${formData.recipientName}&body=${encodeURIComponent(emailBody)}`
     window.location.href = mailtoLink
 
     // Show success message
