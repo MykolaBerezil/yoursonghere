@@ -46,7 +46,7 @@ export default function AboutJeffPage() {
                 <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', marginBottom: '1rem'}}>
                   <iframe
                     style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
-                    src="https://www.youtube.com/embed/02jo6CI1aBw"
+                    src="https://www.youtube.com/embed/02jo6CI1aBw?rel=0&modestbranding=1"
                     title="Arthur, Hurley & Gottlieb on The Mike Douglas Show"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -108,7 +108,7 @@ export default function AboutJeffPage() {
                   <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', border: '3px solid white'}}>
                     <iframe
                       style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
-                      src="https://www.youtube.com/embed/gF2grsWaAC0"
+                      src="https://www.youtube.com/embed/gF2grsWaAC0?rel=0&modestbranding=1"
                       title="Hey Hey Tampa Bay - Buccaneers Fight Song"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -160,7 +160,7 @@ export default function AboutJeffPage() {
                   <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px'}}>
                     <iframe
                       style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
-                      src="https://www.youtube.com/embed/DuKJsRDuE0c"
+                      src="https://www.youtube.com/embed/DuKJsRDuE0c?rel=0&modestbranding=1"
                       title="Something Out West - You Better Run (feat. Tom Hanks cameo)"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
