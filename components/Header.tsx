@@ -1,12 +1,14 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   return (
     <header>
       <div className="container">
         <nav>
-          <Link href="/" className="logo">
-            YourSongHere
+          <Link href="/" className="logo" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+            <Image src="/logo.png" alt="YourSongHere" width={40} height={40} style={{display: 'block'}} />
+            <span>YourSongHere</span>
           </Link>
           <ul className="nav-links">
             <li><Link href="/how-it-works">How It Works</Link></li>

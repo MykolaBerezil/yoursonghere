@@ -8,6 +8,19 @@ export const metadata: Metadata = {
     template: '%s | YourSongHere'
   },
   description: 'Professional custom songs for weddings, anniversaries, proposals, birthdays, and every special moment. Original songs written & recorded by Jeff Arthur Studios in just 3 days. $500 all-inclusive.',
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'android-chrome', url: '/android-chrome-192x192.png', sizes: '192x192' },
+      { rel: 'android-chrome', url: '/android-chrome-512x512.png', sizes: '512x512' },
+    ],
+  },
   keywords: [
     'custom songs',
     'personalized songs',
