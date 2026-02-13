@@ -95,12 +95,31 @@ export default function AboutJeffPage() {
             {/* Hey Hey Tampa Bay */}
             <div style={{background: 'linear-gradient(135deg, #FF6B35 0%, #D62828 100%)', padding: '2rem', borderRadius: '12px', color: 'white', marginBottom: '2rem'}}>
               <h3 style={{marginBottom: '1rem', fontSize: '1.8rem'}}>🏈 "Hey Hey Tampa Bay!"</h3>
-              <p style={{lineHeight: '1.8', marginBottom: '1rem'}}>
-                In 1979, when the Tampa Bay Buccaneers burst into the NFL limelight during their first playoff season, Jeff Arthur created a fight song that took Tampa Bay by storm. Nearly 50 years later, fans still sing it whenever the Bucs score at home.
-              </p>
-              <p style={{lineHeight: '1.8', fontStyle: 'italic'}}>
-                "Hey, hey, Tampa Bay... Let's scream and shout, set the sail, Tampa Bay is about to wail, Gonna fight the fight, not about to fail, Hey hey Tampa Bay - GO BUCS!"
-              </p>
+              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center'}}>
+                <div>
+                  <p style={{lineHeight: '1.8', marginBottom: '1rem'}}>
+                    In 1979, when the Tampa Bay Buccaneers burst into the NFL limelight during their first playoff season, Jeff Arthur created a fight song that took Tampa Bay by storm. Nearly 50 years later, fans still sing it whenever the Bucs score at home.
+                  </p>
+                  <p style={{lineHeight: '1.8', fontStyle: 'italic'}}>
+                    "Hey, hey, Tampa Bay... Let's scream and shout, set the sail, Tampa Bay is about to wail, Gonna fight the fight, not about to fail, Hey hey Tampa Bay - GO BUCS!"
+                  </p>
+                </div>
+                <div>
+                  <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', border: '3px solid white'}}>
+                    <iframe
+                      style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+                      src="https://www.youtube.com/embed/gF2grsWaAC0"
+                      title="Hey Hey Tampa Bay - Buccaneers Fight Song"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                  <p style={{fontSize: '0.85rem', marginTop: '0.5rem', textAlign: 'center', opacity: 0.9}}>
+                    One of countless re-recordings over the decades
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
