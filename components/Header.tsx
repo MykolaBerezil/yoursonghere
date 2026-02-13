@@ -6,9 +6,18 @@ export default function Header() {
     <header>
       <div className="container">
         <nav>
-          <Link href="/" className="logo" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-            <Image src="/logo.png" alt="YourSongHere" width={40} height={40} style={{display: 'block'}} />
-            <span>YourSongHere</span>
+          <Link href="/" className="logo" style={{display: 'flex', alignItems: 'center', gap: '0.3rem'}}>
+            <Image src="/logo.png" alt="YourSongHere" width={56} height={56} style={{display: 'block'}} />
+            <span style={{
+              fontFamily: "'Quicksand', 'Nunito', sans-serif",
+              fontWeight: '500',
+              fontSize: '1.5rem',
+              letterSpacing: '-0.02em',
+              background: 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>YourSongHere</span>
           </Link>
           <ul className="nav-links">
             <li><Link href="/how-it-works">How It Works</Link></li>

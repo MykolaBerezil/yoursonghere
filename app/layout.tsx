@@ -91,6 +91,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
         <link rel="canonical" href="https://www.yoursonghere.com" />
         <script
           type="application/ld+json"
