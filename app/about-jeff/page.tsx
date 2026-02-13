@@ -61,6 +61,30 @@ export default function AboutJeffPage() {
                 </p>
               </div>
             </div>
+            
+            {/* Arthur, Hurley & Gottlieb Album Art */}
+            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginTop: '3rem'}}>
+              <div style={{textAlign: 'center'}}>
+                <img 
+                  src="/arthur-hurley-gottlieb-studio.jpg" 
+                  alt="Arthur, Hurley & Gottlieb publicity photo" 
+                  style={{width: '100%', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)'}}
+                />
+                <p style={{fontSize: '0.85rem', color: '#666', marginTop: '0.5rem', fontStyle: 'italic'}}>
+                  Arthur, Hurley & Gottlieb: Jeffery Arthur (acoustic guitar, lead vocals), Michael Hurley (keyboard, bass, flute, vocals), Neal Gottlieb (violin, vocals)
+                </p>
+              </div>
+              <div style={{textAlign: 'center'}}>
+                <img 
+                  src="/arthur-hurley-gottlieb-album.jpg" 
+                  alt="Arthur, Hurley & Gottlieb Columbia Records album cover" 
+                  style={{width: '100%', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)'}}
+                />
+                <p style={{fontSize: '0.85rem', color: '#666', marginTop: '0.5rem', fontStyle: 'italic'}}>
+                  Columbia Records album cover
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
