@@ -12,6 +12,7 @@ export default function Header() {
             <li><Link href="/how-it-works">How It Works</Link></li>
             <li><Link href="/portfolio">Portfolio</Link></li>
             <li><Link href="/about">About</Link></li>
+            <li><Link href="/about-jeff">About Jeff</Link></li>
             <li><Link href="/faq">FAQ</Link></li>
           </ul>
           <Link href="/create" className="btn btn-primary">
