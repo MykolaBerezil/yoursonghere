@@ -17,29 +17,33 @@ export default function Step5Payment({ formData, prevStep }: Props) {
 
     try {
       const formBody = new FormData()
-      formBody.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '')
-      formBody.append('subject', `Custom Song Order - ${formData.recipientName}`)
-      formBody.append('from_name', formData.customerName)
-      formBody.append('email', formData.email)
+      
+      // FormSubmit.co special fields
+      formBody.append('_subject', `Custom Song Order - ${formData.recipientName}`)
+      formBody.append('_captcha', 'false')
+      formBody.append('_template', 'table')
       
       // Order details
-      formBody.append('occasion', formData.occasion)
-      formBody.append('recipientName', formData.recipientName)
-      formBody.append('relationship', formData.relationship)
-      formBody.append('dateNeeded', formData.dateNeeded)
-      formBody.append('memories', formData.memories)
-      formBody.append('insideJokes', formData.insideJokes || 'Not provided')
-      formBody.append('personality', formData.personality || 'Not provided')
-      formBody.append('specificDetails', formData.specificDetails || 'Not provided')
-      formBody.append('tone', formData.tone)
-      formBody.append('genres', formData.genres?.join(', ') || 'Not specified')
-      formBody.append('referenceArtists', formData.referenceArtists || 'Not provided')
-      formBody.append('tempo', formData.tempo || 'Not specified')
-      formBody.append('specialRequests', formData.specialRequests || 'None')
-      formBody.append('phone', formData.phone || 'Not provided')
-      formBody.append('bestTimeToContact', formData.bestTimeToContact || 'Any time')
+      formBody.append('Occasion', formData.occasion)
+      formBody.append('Recipient Name', formData.recipientName)
+      formBody.append('Relationship', formData.relationship)
+      formBody.append('Date Needed', formData.dateNeeded)
+      formBody.append('Memories', formData.memories)
+      formBody.append('Inside Jokes', formData.insideJokes || 'Not provided')
+      formBody.append('Personality', formData.personality || 'Not provided')
+      formBody.append('Specific Details', formData.specificDetails || 'Not provided')
+      formBody.append('Tone', formData.tone)
+      formBody.append('Genres', formData.genres?.join(', ') || 'Not specified')
+      formBody.append('Reference Artists', formData.referenceArtists || 'Not provided')
+      formBody.append('Tempo', formData.tempo || 'Not specified')
+      formBody.append('Special Requests', formData.specialRequests || 'None')
+      formBody.append('Customer Name', formData.customerName)
+      formBody.append('Customer Email', formData.email)
+      formBody.append('Phone', formData.phone || 'Not provided')
+      formBody.append('Best Time to Contact', formData.bestTimeToContact || 'Any time')
+      formBody.append('Price', '$500 ($250 deposit, $250 on delivery)')
 
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://formsubmit.co/jinglejeff@gmail.com', {
         method: 'POST',
         body: formBody
       })
