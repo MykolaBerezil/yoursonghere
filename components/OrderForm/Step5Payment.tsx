@@ -16,12 +16,32 @@ export default function Step5Payment({ formData, prevStep }: Props) {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('/api/send-order', {
+      const formBody = new FormData()
+      formBody.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '')
+      formBody.append('subject', `Custom Song Order - ${formData.recipientName}`)
+      formBody.append('from_name', formData.customerName)
+      formBody.append('email', formData.email)
+      
+      // Order details
+      formBody.append('occasion', formData.occasion)
+      formBody.append('recipientName', formData.recipientName)
+      formBody.append('relationship', formData.relationship)
+      formBody.append('dateNeeded', formData.dateNeeded)
+      formBody.append('memories', formData.memories)
+      formBody.append('insideJokes', formData.insideJokes || 'Not provided')
+      formBody.append('personality', formData.personality || 'Not provided')
+      formBody.append('specificDetails', formData.specificDetails || 'Not provided')
+      formBody.append('tone', formData.tone)
+      formBody.append('genres', formData.genres?.join(', ') || 'Not specified')
+      formBody.append('referenceArtists', formData.referenceArtists || 'Not provided')
+      formBody.append('tempo', formData.tempo || 'Not specified')
+      formBody.append('specialRequests', formData.specialRequests || 'None')
+      formBody.append('phone', formData.phone || 'Not provided')
+      formBody.append('bestTimeToContact', formData.bestTimeToContact || 'Any time')
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: formBody
       })
 
       if (!response.ok) {
