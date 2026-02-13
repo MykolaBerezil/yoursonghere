@@ -124,8 +124,18 @@ export default function AboutJeffPage() {
                   <p style={{lineHeight: '1.8', marginBottom: '1rem'}}>
                     In 1979, when the Tampa Bay Buccaneers burst into the NFL limelight during their first playoff season, Jeff Arthur created a fight song that took Tampa Bay by storm. Nearly 50 years later, fans still sing it whenever the Bucs score at home.
                   </p>
-                  <p style={{lineHeight: '1.8', fontStyle: 'italic'}}>
-                    "Hey, hey, Tampa Bay... Let's scream and shout, set the sail, Tampa Bay is about to wail, Gonna fight the fight, not about to fail, Hey hey Tampa Bay - GO BUCS!"
+                  <p style={{lineHeight: '1.6', fontStyle: 'italic', fontSize: '1.05rem'}}>
+                    "B-U-C-C-A-N-E-E-R-S, Go Bucs!<br/>
+                    Hey, Hey, Tampa Bay!<br/>
+                    The Bucs know how to shine!<br/>
+                    Hey, Hey, Tampa Bay!<br/>
+                    The Bucs know how to shine!<br/>
+                    We're in trouble,<br/>
+                    That's okay<br/>
+                    We can pull it out!<br/>
+                    Because we know we're on the top<br/>
+                    We stand up<br/>
+                    Stand up and shout!"
                   </p>
                 </div>
                 <div>
