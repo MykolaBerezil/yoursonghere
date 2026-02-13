@@ -1,10 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { FormData } from './OrderFormWizard'
+import type { FormData as OrderFormData } from './OrderFormWizard'
 
 interface Props {
-  formData: FormData
+  formData: OrderFormData
   prevStep: () => void
 }
 
