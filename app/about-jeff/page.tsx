@@ -43,11 +43,21 @@ export default function AboutJeffPage() {
                 </p>
               </div>
               <div style={{background: '#f8f8f8', padding: '2rem', borderRadius: '12px', textAlign: 'center'}}>
-                <div style={{background: '#e0e0e0', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '8px', marginBottom: '1rem'}}>
-                  <p style={{color: '#999'}}>Arthur, Hurley & Gottlieb<br/>Album Cover (1973)</p>
+                <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', marginBottom: '1rem'}}>
+                  <iframe
+                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+                    src="https://www.youtube.com/embed/02jo6CI1aBw"
+                    title="Arthur, Hurley & Gottlieb on The Mike Douglas Show"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
-                <p style={{fontSize: '0.9rem', color: '#666', fontStyle: 'italic'}}>
-                  The complete anthology (1970-1975) featuring "Sunshine Ship" and other classics is available on Qobuz and major streaming platforms.
+                <p style={{fontSize: '0.9rem', color: '#666', fontStyle: 'italic', fontWeight: 'bold', marginBottom: '0.5rem'}}>
+                  Watch: Arthur, Hurley & Gottlieb on The Mike Douglas Show
+                </p>
+                <p style={{fontSize: '0.85rem', color: '#999'}}>
+                  The complete anthology (1970-1975) featuring "Sunshine Ship" is available on major streaming platforms.
                 </p>
               </div>
             </div>
@@ -114,26 +124,45 @@ export default function AboutJeffPage() {
         {/* Family & Today */}
         <section style={{padding: '3rem 0'}}>
           <div className="container" style={{maxWidth: '1000px'}}>
-            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start'}}>
-              <div style={{background: 'white', padding: '2rem', borderRadius: '12px'}}>
-                <h2 style={{color: '#8B5CF6', marginBottom: '1.5rem'}}>Music Runs in the Family</h2>
-                <p style={{lineHeight: '1.8', marginBottom: '1rem'}}>
-                  Today, Jeff's son <strong>Andrew Arthur</strong> carries on the musical legacy as part of the duo <strong>Something Out West</strong> with Chet Hanks (son of Tom Hanks). Based in Nashville, the duo continues the Arthur tradition of compelling songwriting and performance.
-                </p>
-                <p style={{lineHeight: '1.8'}}>
-                  Jeff frequently visits Nashville to spend time with Andrew and stay connected to the music scene that shaped his early career.
-                </p>
+            <h2 style={{color: '#8B5CF6', marginBottom: '2rem', textAlign: 'center'}}>Music Runs in the Family</h2>
+            
+            <div style={{background: 'white', padding: '2rem', borderRadius: '12px', marginBottom: '2rem'}}>
+              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center'}}>
+                <div>
+                  <h3 style={{color: '#8B5CF6', marginBottom: '1rem'}}>Something Out West</h3>
+                  <p style={{lineHeight: '1.8', marginBottom: '1rem'}}>
+                    Jeff's son <strong>Andrew Arthur</strong> carries on the musical legacy as part of the duo <strong>Something Out West</strong> with Chet Hanks (son of Tom Hanks). Based in Nashville, the duo continues the Arthur tradition of compelling songwriting and performance.
+                  </p>
+                  <p style={{lineHeight: '1.8'}}>
+                    Jeff frequently visits Nashville to spend time with Andrew and stay connected to the music scene that shaped his early career.
+                  </p>
+                </div>
+                <div>
+                  <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px'}}>
+                    <iframe
+                      style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+                      src="https://www.youtube.com/embed/DuKJsRDuE0c"
+                      title="Something Out West - You Better Run (feat. Tom Hanks cameo)"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                  <p style={{fontSize: '0.85rem', color: '#666', fontStyle: 'italic', marginTop: '0.5rem', textAlign: 'center'}}>
+                    Watch for a cameo by Tom Hanks!
+                  </p>
+                </div>
               </div>
+            </div>
 
-              <div style={{background: 'white', padding: '2rem', borderRadius: '12px'}}>
-                <h2 style={{color: '#8B5CF6', marginBottom: '1.5rem'}}>Today: YourSongHere</h2>
-                <p style={{lineHeight: '1.8', marginBottom: '1rem'}}>
-                  Now semi-retired from the jingle business, Jeff Arthur has come full circle. At his Clearwater studio, he's returned to his roots - creating personal, meaningful songs for individuals and their special moments.
-                </p>
-                <p style={{lineHeight: '1.8'}}>
-                  Drawing on decades of experience writing for Fortune 500 companies, performing with music legends, and creating thousands of memorable melodies, Jeff now offers something uniquely special: custom songs that capture your story, your love, your moment - forever.
-                </p>
-              </div>
+            <div style={{background: 'white', padding: '2rem', borderRadius: '12px'}}>
+              <h2 style={{color: '#8B5CF6', marginBottom: '1.5rem'}}>Today: YourSongHere</h2>
+              <p style={{lineHeight: '1.8', marginBottom: '1rem'}}>
+                Now semi-retired from the jingle business, Jeff Arthur has come full circle. At his Clearwater studio, he's returned to his roots - creating personal, meaningful songs for individuals and their special moments.
+              </p>
+              <p style={{lineHeight: '1.8'}}>
+                Drawing on decades of experience writing for Fortune 500 companies, performing with music legends, and creating thousands of memorable melodies, Jeff now offers something uniquely special: custom songs that capture your story, your love, your moment - forever.
+              </p>
             </div>
           </div>
         </section>
