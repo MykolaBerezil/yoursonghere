@@ -15,53 +15,26 @@ export default function Step5Payment({ formData, prevStep }: Props) {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Build email body
-    const emailBody = `
-NEW CUSTOM SONG ORDER
+    try {
+      const response = await fetch('/api/send-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-OCCASION: ${formData.occasion}
-RECIPIENT: ${formData.recipientName}
-RELATIONSHIP: ${formData.relationship}
-DATE NEEDED: ${formData.dateNeeded}
+      if (!response.ok) {
+        throw new Error('Failed to send order')
+      }
 
-MEMORIES:
-${formData.memories}
-
-INSIDE JOKES:
-${formData.insideJokes || 'Not provided'}
-
-PERSONALITY:
-${formData.personality || 'Not provided'}
-
-SPECIFIC DETAILS:
-${formData.specificDetails || 'Not provided'}
-
-TONE: ${formData.tone}
-GENRES: ${formData.genres?.join(', ') || 'Not specified'}
-REFERENCE ARTISTS: ${formData.referenceArtists || 'Not provided'}
-TEMPO: ${formData.tempo || 'Not specified'}
-
-SPECIAL REQUESTS:
-${formData.specialRequests || 'None'}
-
-CONTACT INFO:
-Name: ${formData.customerName}
-Email: ${formData.email}
-Phone: ${formData.phone || 'Not provided'}
-Best time to contact: ${formData.bestTimeToContact || 'Any time'}
-
-PRICE: $500 ($250 deposit, $250 on delivery)
-    `.trim()
-
-    // Open email client
-    const mailtoLink = `mailto:jinglejeff@gmail.com?subject=Custom Song Order - ${formData.recipientName}&body=${encodeURIComponent(emailBody)}`
-    window.location.href = mailtoLink
-
-    // Show success message
-    setTimeout(() => {
-      alert('Thank you! Your order details have been prepared. Please send the email to complete your order. We\'ll respond within 24 hours with payment details!')
+      alert('Thank you! Your order has been submitted. Jeff will contact you within 24 hours with payment details!')
       window.location.href = '/'
-    }, 1000)
+    } catch (error) {
+      console.error('Error submitting order:', error)
+      alert('There was an error submitting your order. Please email jinglejeff@gmail.com directly or try again.')
+      setIsSubmitting(false)
+    }
   }
 
   return (
