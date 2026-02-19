@@ -6,8 +6,7 @@ export default function Occasions() {
     { icon: '💎', title: 'Proposals', description: 'Pop the question with a song' },
     { icon: '👶', title: 'Baby Showers', description: 'Welcome the newest family member' },
     { icon: '🎓', title: 'Graduations', description: 'Honor their achievement' },
-    { icon: '🕯️', title: 'Bar/Bat Mitzvahs', description: 'Mark this sacred milestone' },
-    { icon: '🏢', title: 'Corporate Events', description: 'Celebrate company milestones' },
+    { icon: '🏢', title: 'Corporate Milestones', description: 'Celebrate company achievements' },
   ]
 
   return (

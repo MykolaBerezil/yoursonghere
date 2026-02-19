@@ -3,42 +3,31 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export default function PortfolioPage() {
+  // Sample songs - audio files to be added in /public/portfolio/
   const songs = [
     {
       title: "Forever Starts Today",
       occasion: "Wedding First Dance",
-      story: "Michael and Sarah wanted a unique first dance song that told the story of how they met at a coffee shop in Seattle. The song weaves in references to their favorite rainy-day dates and their rescue dog Luna.",
-      genre: "Acoustic Pop"
+      description: "A romantic acoustic song celebrating a couple's love story",
+      audioFile: "/portfolio/song1.mp3" // To be added
     },
     {
       title: "50 Years of Love",
-      occasion: "50th Anniversary",
-      story: "The Johnson family commissioned this song for their parents' golden anniversary. It chronicles their journey from high school sweethearts to grandparents of 7, including references to their beloved family cabin.",
-      genre: "Folk/Country"
+      occasion: "Anniversary Celebration",
+      description: "A heartfelt tribute to decades of love and memories",
+      audioFile: "/portfolio/song2.mp3" // To be added
     },
     {
       title: "Will You Marry Me?",
       occasion: "Marriage Proposal",
-      story: "James wanted to propose to Emma in a unique way. This romantic ballad incorporated the story of their travels together and was performed live during a surprise dinner.",
-      genre: "Piano Ballad"
+      description: "A romantic ballad created for a special proposal moment",
+      audioFile: "/portfolio/song3.mp3" // To be added
     },
     {
       title: "Sweet Sixteen Dream",
       occasion: "Birthday Celebration",
-      story: "A proud father commissioned this upbeat pop anthem for his daughter's sweet sixteen, celebrating her accomplishments, dreams, and vibrant personality.",
-      genre: "Pop"
-    },
-    {
-      title: "Welcome Baby Grace",
-      occasion: "Baby Shower",
-      story: "Grandparents-to-be commissioned this gentle lullaby for their first grandchild, incorporating family traditions and hopes for the future.",
-      genre: "Lullaby"
-    },
-    {
-      title: "In Loving Memory",
-      occasion: "Memorial Tribute",
-      story: "A family wanted to honor their father's legacy with a song celebrating his life, values, and the joy he brought to everyone who knew him.",
-      genre: "Contemporary Folk"
+      description: "An upbeat celebration of youth and dreams",
+      audioFile: "/portfolio/song4.mp3" // To be added
     }
   ]
 
@@ -49,8 +38,7 @@ export default function PortfolioPage() {
         <div className="container">
           <h1 className="page-title">Portfolio</h1>
           <p className="page-subtitle">
-            Every song tells a unique story. Here are a few examples of custom songs we've created
-            for special occasions. (Sample audio coming soon!)
+            Listen to examples of custom songs created for special occasions.
           </p>
 
           <div className="portfolio-grid">
@@ -59,10 +47,12 @@ export default function PortfolioPage() {
                 <div className="song-icon">♪</div>
                 <h3>{song.title}</h3>
                 <p className="occasion-tag">{song.occasion}</p>
-                <p className="song-story">{song.story}</p>
-                <p className="genre-tag">Genre: {song.genre}</p>
-                <div className="audio-placeholder">
-                  🎵 Audio sample coming soon
+                <p className="song-story">{song.description}</p>
+                <div className="audio-player">
+                  <audio controls style={{width: '100%', marginTop: '1rem'}}>
+                    <source src={song.audioFile} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
                 </div>
               </div>
             ))}

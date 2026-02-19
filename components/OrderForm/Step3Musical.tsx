@@ -17,7 +17,7 @@ export default function Step3Musical({ formData, updateFormData, nextStep, prevS
 
   const genres = [
     'Pop', 'Rock', 'Country', 'Folk', 'Jazz', 'R&B/Soul',
-    'Blues', 'Classical', 'Singer-Songwriter', 'Indie'
+    'Blues', 'Singer-Songwriter'
   ]
 
   const handleGenreToggle = (genre: string) => {
@@ -62,20 +62,7 @@ export default function Step3Musical({ formData, updateFormData, nextStep, prevS
         </div>
       </div>
 
-      <div style={{marginBottom: '1.5rem'}}>
-        <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '600'}}>
-          Reference Songs or Artists <span style={{color: '#999', fontWeight: 'normal'}}>(optional)</span>
-        </label>
-        <textarea
-          value={formData.referenceArtists}
-          onChange={(e) => updateFormData({ referenceArtists: e.target.value })}
-          placeholder="e.g., 'Something like Ed Sheeran's Thinking Out Loud' or 'The vibe of Taylor Swift'"
-          rows={3}
-          style={{width: '100%', padding: '0.75rem', borderRadius: '8px', border: '2px solid #e0e0e0', fontSize: '1rem', fontFamily: 'inherit'}}
-        />
-      </div>
-
-      <div style={{marginBottom: '1.5rem'}}>
+      <div style={{marginBottom: '2rem'}}>
         <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '600'}}>
           Tempo Preference
         </label>
@@ -86,24 +73,10 @@ export default function Step3Musical({ formData, updateFormData, nextStep, prevS
           style={{width: '100%', padding: '0.75rem', borderRadius: '8px', border: '2px solid #e0e0e0', fontSize: '1rem'}}
         >
           <option value="">Select tempo...</option>
-          <option value="Slow & Intimate">Slow & Intimate</option>
-          <option value="Medium & Flowing">Medium & Flowing</option>
-          <option value="Upbeat & Energetic">Upbeat & Energetic</option>
-          <option value="No Preference">No Preference - Surprise Me!</option>
+          <option value="Slow">Slow</option>
+          <option value="Medium">Medium</option>
+          <option value="Fast">Fast</option>
         </select>
-      </div>
-
-      <div style={{marginBottom: '2rem'}}>
-        <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '600'}}>
-          Any Other Musical Requests? <span style={{color: '#999', fontWeight: 'normal'}}>(optional)</span>
-        </label>
-        <textarea
-          value={formData.specialRequests}
-          onChange={(e) => updateFormData({ specialRequests: e.target.value })}
-          placeholder="Instruments you'd like to hear, specific lyrics you want included, etc."
-          rows={3}
-          style={{width: '100%', padding: '0.75rem', borderRadius: '8px', border: '2px solid #e0e0e0', fontSize: '1rem', fontFamily: 'inherit'}}
-        />
       </div>
 
       <div style={{display: 'flex', gap: '1rem'}}>

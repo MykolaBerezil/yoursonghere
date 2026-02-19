@@ -6,14 +6,9 @@ export default function Testimonials() {
       occasion: "Wedding Anniversary"
     },
     {
-      text: "I proposed with a custom song Jeff wrote about our first date, our inside jokes, everything that makes us *us*. She said yes before I even got on one knee! Worth every penny.",
+      text: "I proposed with a custom song Jeff wrote about our first date, our inside jokes, everything that makes us *us*. She said yes before I even got on one knee!",
       author: "David Rodriguez",
       occasion: "Proposal"
-    },
-    {
-      text: "For my parents' 50th anniversary, I wanted something truly special. Jeff interviewed them and wrote a song that had the whole family in tears. It's played at every gathering now.",
-      author: "Sarah Thompson",
-      occasion: "50th Anniversary"
     }
   ]
 

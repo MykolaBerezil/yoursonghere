@@ -10,7 +10,7 @@ export default function HowItWorksPage() {
         <div className="container">
           <h1 className="page-title">How It Works</h1>
           <p className="page-subtitle">
-            Creating your custom song is simple. Here's our proven 4-step process:
+            Creating your custom song is simple. Here's our proven 3-step process:
           </p>
 
           <div className="process-detail">
@@ -36,60 +36,30 @@ export default function HowItWorksPage() {
               <p>
                 Jeff Arthur Studios will personally craft an original song based on your story.
                 Every song is written from scratch, professionally recorded in our studio, and produced
-                to radio-quality standards. We'll reach out if we need any clarifications.
+                to radio-quality standards.
               </p>
               <ul>
                 <li>Professional songwriting and composition</li>
                 <li>Studio recording with live instruments</li>
                 <li>Professional mixing and mastering</li>
-                <li>Typical turnaround: 3 days</li>
               </ul>
             </div>
 
             <div className="process-step-detail">
               <div className="step-number">3</div>
-              <h2>Review & Refine</h2>
-              <p>
-                We'll send you the first version of your song. Listen, enjoy, and let us know if you'd
-                like any changes. Every custom song includes up to 3 rounds of revisions to ensure it's
-                absolutely perfect.
-              </p>
-              <ul>
-                <li>Receive your song via private streaming link</li>
-                <li>Request changes to lyrics, melody, or arrangement</li>
-                <li>3 revision rounds included</li>
-                <li>Direct communication with Jeff</li>
-              </ul>
-            </div>
-
-            <div className="process-step-detail">
-              <div className="step-number">4</div>
               <h2>Celebrate & Share</h2>
               <p>
-                Once you approve the final version, complete your payment and receive your professional
-                song files. Download, share, and enjoy your one-of-a-kind musical memory forever.
+                Receive your professional song as an MP3 file. Download, share, and enjoy your one-of-a-kind musical memory forever.
               </p>
               <ul>
-                <li>High-quality MP3 and WAV files</li>
-                <li>Printed lyric sheet (PDF)</li>
+                <li>High-quality MP3 file</li>
                 <li>Unlimited downloads</li>
                 <li>Full rights to share with family and friends</li>
               </ul>
             </div>
           </div>
 
-          <div className="pricing-info">
-            <h2>Investment</h2>
-            <p className="price-large">$500</p>
-            <p>Pay $250 deposit to start, $250 when song is complete</p>
-            <ul className="included-list">
-              <li>Original custom composition</li>
-              <li>Professional studio recording</li>
-              <li>Up to 3 revision rounds</li>
-              <li>MP3 + WAV files</li>
-              <li>Lyric sheet</li>
-              <li>3-day turnaround</li>
-            </ul>
+          <div style={{textAlign: 'center', marginTop: '3rem'}}>
             <Link href="/create" className="btn btn-primary btn-large">
               Start Your Song
             </Link>

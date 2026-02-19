@@ -19,7 +19,7 @@ export default function Step4Contact({ formData, updateFormData, nextStep, prevS
     <form onSubmit={handleSubmit}>
       <h2 style={{marginBottom: '2rem', color: '#333'}}>Your Contact Information</h2>
       <p style={{color: '#666', marginBottom: '2rem'}}>
-        Jeff will personally reach out to discuss your song and answer any questions.
+        We'll use this information to deliver your song and answer any questions.
       </p>
 
       <div style={{marginBottom: '1.5rem'}}>

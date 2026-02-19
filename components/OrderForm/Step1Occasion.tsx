@@ -16,7 +16,7 @@ export default function Step1Occasion({ formData, updateFormData, nextStep }: Pr
 
   const occasions = [
     'Wedding', 'Anniversary', 'Birthday', 'Proposal', 'Baby Shower',
-    'Graduation', 'Bar/Bat Mitzvah', 'Corporate Event', 'Memorial/Tribute', 'Other'
+    'Graduation', 'Corporate Milestone', 'Other'
   ]
 
   return (
@@ -77,9 +77,6 @@ export default function Step1Occasion({ formData, updateFormData, nextStep }: Pr
           onChange={(e) => updateFormData({ dateNeeded: e.target.value })}
           style={{width: '100%', padding: '0.75rem', borderRadius: '8px', border: '2px solid #e0e0e0', fontSize: '1rem'}}
         />
-        <p style={{fontSize: '0.85rem', color: '#666', marginTop: '0.5rem'}}>
-          Standard turnaround is 3 days. Rush delivery available for urgent requests.
-        </p>
       </div>
 
       <button type="submit" className="btn btn-primary" style={{width: '100%'}}>

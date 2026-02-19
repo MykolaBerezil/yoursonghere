@@ -5,7 +5,6 @@ import Hero from '@/components/Hero'
 import ProcessSteps from '@/components/ProcessSteps'
 import Occasions from '@/components/Occasions'
 import Testimonials from '@/components/Testimonials'
-import Pricing from '@/components/Pricing'
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
         <ProcessSteps />
         <Occasions />
         <Testimonials />
-        <Pricing />
       </main>
       <Footer />
     </>

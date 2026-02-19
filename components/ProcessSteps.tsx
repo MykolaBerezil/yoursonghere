@@ -3,22 +3,17 @@ export default function ProcessSteps() {
     {
       number: 1,
       title: 'Share Your Story',
-      description: 'Tell us about the moment, the people, the memories that matter most.'
+      description: 'Fill out our form with details about the moment, the people, and the memories that matter most.'
     },
     {
       number: 2,
       title: 'We Create Magic',
-      description: 'Jeff personally writes and records your song in our professional studio in just 3 days.'
+      description: 'Jeff personally writes and records your custom song in our professional studio.'
     },
     {
       number: 3,
-      title: 'Perfect It Together',
-      description: 'Up to 3 revisions included to ensure your song is absolutely perfect.'
-    },
-    {
-      number: 4,
       title: 'Treasure Forever',
-      description: 'Download your MP3 & WAV files plus lyric sheet. Share, stream, and cherish forever.'
+      description: 'Receive your song as an MP3 file. Share, stream, and cherish forever.'
     }
   ]
 

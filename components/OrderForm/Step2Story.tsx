@@ -71,7 +71,7 @@ export default function Step2Story({ formData, updateFormData, nextStep, prevSte
         <textarea
           value={formData.specificDetails}
           onChange={(e) => updateFormData({ specificDetails: e.target.value })}
-          placeholder="Dates, places, names, anything specific you want mentioned"
+          placeholder="Any dates, places, names, or special moments you'd like mentioned in the song"
           rows={3}
           style={{width: '100%', padding: '0.75rem', borderRadius: '8px', border: '2px solid #e0e0e0', fontSize: '1rem', fontFamily: 'inherit'}}
         />
