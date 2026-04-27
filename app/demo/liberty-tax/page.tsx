@@ -71,7 +71,7 @@ export default function LibertyTaxDemo() {
         <p className="demo-subtitle">60 Full Sing &amp; Spot Demo</p>
 
         <div className="demo-player">
-          <audio ref={audioRef} src="/audio/LibertyTaxDemo.mp3" preload="metadata" />
+          <audio ref={audioRef} src="/audio/LIBERTY%20TAX%2060%20FS%20and%20SPOT%20DEMO.mp3" preload="metadata" />
 
           <button className="demo-play-btn" onClick={togglePlay} aria-label={isPlaying ? 'Pause' : 'Play'}>
             {isPlaying ? (
